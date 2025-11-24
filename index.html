@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tehran Gold Hunter AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                400: '#FACC15',
+                500: '#EAB308',
+                600: '#CA8A04',
+                glow: '#FDE047',
+              },
+              dark: {
+                900: '#050505',
+                800: '#0A0A0A',
+                700: '#121212',
+                card: '#171717',
+              }
+            },
+            fontFamily: {
+              sans: ['Vazirmatn', 'ui-sans-serif', 'system-ui'],
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'flash-green': 'flashGreen 0.5s ease-in-out',
+              'flash-red': 'flashRed 0.5s ease-in-out',
+            },
+            keyframes: {
+              flashGreen: {
+                '0%, 100%': { backgroundColor: 'transparent' },
+                '50%': { backgroundColor: 'rgba(16, 185, 129, 0.2)' },
+              },
+              flashRed: {
+                '0%, 100%': { backgroundColor: 'transparent' },
+                '50%': { backgroundColor: 'rgba(244, 63, 94, 0.2)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #050505;
+        color: #e5e5e5;
+        font-family: 'Vazirmatn', sans-serif;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #EAB308;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
